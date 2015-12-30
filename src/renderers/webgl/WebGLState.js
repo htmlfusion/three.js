@@ -499,6 +499,20 @@ THREE.WebGLState = function ( gl, extensions, paramThreeToGL ) {
 
 	};
 
+	this.texSubImage2D = function () {
+
+		try {
+
+			gl.texSubImage2D.apply( gl, arguments );
+
+		} catch ( error ) {
+
+			console.error( error );
+
+		}
+
+	};
+
 	//
 
 	this.reset = function () {
